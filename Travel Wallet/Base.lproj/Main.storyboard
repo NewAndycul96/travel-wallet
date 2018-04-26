@@ -89,7 +89,7 @@
         <!--Add Trip-->
         <scene sceneID="aCV-Jh-a5z">
             <objects>
-                <tableViewController id="EEK-bG-ayK" customClass="AddtripController" customModule="Travel_Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="EEK-bG-ayK" customClass="AddtripViewController" customModule="Travel_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oQY-Pz-xHT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,9 +219,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="ms1-kb-ah5"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="Destination" destination="Gl2-SP-YXb" id="8Pg-9d-RiO"/>
-                        <outlet property="TripName" destination="hyz-vp-kpq" id="zZv-9L-A37"/>
+                        <outlet property="destination" destination="Gl2-SP-YXb" id="zdV-GV-W7R"/>
                         <outlet property="myTableView" destination="oQY-Pz-xHT" id="XAy-3p-dqx"/>
+                        <outlet property="tripName" destination="hyz-vp-kpq" id="edp-zK-2UM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAL-E3-vdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
