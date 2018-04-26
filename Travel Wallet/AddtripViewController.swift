@@ -12,6 +12,8 @@ class AddtripViewController: UITableViewController {
 
     @IBOutlet weak var tripName: UITextField!
     @IBOutlet weak var destination: UITextField!
+    @IBOutlet weak var startDate: UITableViewCell!
+    @IBOutlet weak var endDate: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
 
