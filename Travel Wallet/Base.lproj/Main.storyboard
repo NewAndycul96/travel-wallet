@@ -89,7 +89,7 @@
         <!--Add Trip-->
         <scene sceneID="aCV-Jh-a5z">
             <objects>
-                <tableViewController id="EEK-bG-ayK" customClass="AddtripViewController" customModule="Travel_Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="EEK-bG-ayK" customClass="AddtripController" customModule="Travel_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oQY-Pz-xHT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,6 +182,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="w8z-IZ-TOY" kind="show" id="Ezc-My-11y"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="endDate" textLabel="mJd-R3-qbe" detailTextLabel="Euu-lB-oRE" style="IBUITableViewCellStyleValue1" id="Y9l-Sq-hK8">
                                         <rect key="frame" x="0.0" y="160" width="375" height="44"/>
@@ -206,6 +209,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vjx-EW-hbu" kind="show" id="DrI-0h-yFf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -219,9 +225,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="ms1-kb-ah5"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="destination" destination="Gl2-SP-YXb" id="zdV-GV-W7R"/>
+                        <outlet property="Destination" destination="Gl2-SP-YXb" id="8Pg-9d-RiO"/>
+                        <outlet property="TripName" destination="hyz-vp-kpq" id="zZv-9L-A37"/>
                         <outlet property="myTableView" destination="oQY-Pz-xHT" id="XAy-3p-dqx"/>
-                        <outlet property="tripName" destination="hyz-vp-kpq" id="edp-zK-2UM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAL-E3-vdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,28 +242,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-IL-BSR">
-                                <rect key="frame" x="0.0" y="354" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-IL-BSR">
+                                <rect key="frame" x="0.0" y="398" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="546456801.99310803">
                                     <!--2018-04-26 17:33:21 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4D-lK-Ati">
-                                <rect key="frame" x="144" y="186" width="86" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4D-lK-Ati">
+                                <rect key="frame" x="119" y="231" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k4D-lK-Ati" firstAttribute="leading" secondItem="KM0-q8-HKp" secondAttribute="leading" constant="119" id="MJv-cY-wUg"/>
+                            <constraint firstItem="kF3-IL-BSR" firstAttribute="trailing" secondItem="KM0-q8-HKp" secondAttribute="trailing" id="N7E-vT-QtB"/>
+                            <constraint firstItem="kF3-IL-BSR" firstAttribute="leading" secondItem="KM0-q8-HKp" secondAttribute="leading" id="SXl-ne-IhC"/>
+                            <constraint firstItem="KM0-q8-HKp" firstAttribute="trailing" secondItem="k4D-lK-Ati" secondAttribute="trailing" constant="119" id="eVD-9G-q3n"/>
+                            <constraint firstItem="k4D-lK-Ati" firstAttribute="top" secondItem="KM0-q8-HKp" secondAttribute="top" constant="167" id="jtA-tO-h3q"/>
+                            <constraint firstItem="kF3-IL-BSR" firstAttribute="top" secondItem="k4D-lK-Ati" secondAttribute="bottom" constant="146" id="yV7-tA-bC2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KM0-q8-HKp"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrL-Ke-isC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1512.8" y="423.23838080959524"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yJx-Ld-9hL">
+            <objects>
+                <viewController id="vjx-EW-hbu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cvj-gS-lDB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-bi-22G">
+                                <rect key="frame" x="0.0" y="358" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="546461107.34619105">
+                                    <!--2018-04-26 18:45:07 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySQ-nZ-rxg">
+                                <rect key="frame" x="117" y="162" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Brp-JB-VUT" firstAttribute="bottom" secondItem="Cbs-bi-22G" secondAttribute="bottom" id="8tJ-iz-O8n"/>
+                            <constraint firstItem="ySQ-nZ-rxg" firstAttribute="top" secondItem="Brp-JB-VUT" secondAttribute="top" constant="98" id="Bom-n2-M1e"/>
+                            <constraint firstItem="ySQ-nZ-rxg" firstAttribute="leading" secondItem="Brp-JB-VUT" secondAttribute="leading" constant="117" id="Q8V-ej-9EU"/>
+                            <constraint firstItem="Cbs-bi-22G" firstAttribute="leading" secondItem="Brp-JB-VUT" secondAttribute="leading" id="VuW-Jc-wnf"/>
+                            <constraint firstItem="Brp-JB-VUT" firstAttribute="trailing" secondItem="Cbs-bi-22G" secondAttribute="trailing" id="f2i-ge-jph"/>
+                            <constraint firstItem="Brp-JB-VUT" firstAttribute="trailing" secondItem="ySQ-nZ-rxg" secondAttribute="trailing" constant="118" id="ooT-un-UDa"/>
+                            <constraint firstItem="Cbs-bi-22G" firstAttribute="top" secondItem="ySQ-nZ-rxg" secondAttribute="bottom" constant="175" id="v98-3i-bo9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Brp-JB-VUT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIx-Tb-54a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="1104.1979010494754"/>
         </scene>
         <!--Timeline-->
         <scene sceneID="kTc-gE-nFD">
