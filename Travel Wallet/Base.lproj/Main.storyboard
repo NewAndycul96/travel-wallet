@@ -234,7 +234,7 @@
             </objects>
             <point key="canvasLocation" x="500" y="642.72863568215894"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="Whl-MR-NcS">
             <objects>
                 <viewController id="w8z-IZ-TOY" sceneMemberID="viewController">
@@ -266,12 +266,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KM0-q8-HKp"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="AIl-Uv-2ck">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="RNL-pO-89R"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrL-Ke-isC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1512.8" y="423.23838080959524"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="yJx-Ld-9hL">
             <objects>
                 <viewController id="vjx-EW-hbu" sceneMemberID="viewController">
@@ -304,6 +307,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Brp-JB-VUT"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="pyh-Jm-xrG">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ACd-3D-aSi"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIx-Tb-54a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
