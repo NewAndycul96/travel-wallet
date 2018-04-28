@@ -10,18 +10,17 @@ import UIKit
 
 class AddtripViewController: UITableViewController {
 
-    @IBOutlet weak var tripName: UITextField!
-    @IBOutlet weak var destination: UITextField!
+
+    @IBOutlet weak var tripNameTextField: UITextField!
+    @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var startDate: UITableViewCell!
     @IBOutlet weak var endDate: UITableViewCell!
+    @IBOutlet weak var datePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tripNameTextField.delegate = self as? UITextFieldDelegate
+        destinationTextField.delegate = self as? UITextFieldDelegate
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +28,28 @@ class AddtripViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        tripNameTextField.resignFirstResponder()
+        destinationTextField.resignFirstResponder()
+    }
+
+    @IBAction func saveTrip(_ sender: Any) {
+        let name = tripNameTextField.text
+        let destinationtext = destinationTextField.text
+        let date = datePicker.date
+        
+        if let trip = Trip(tripName: name, destination: destinationtext, date: date){
+            do{
+                let managedContext = trip.managedObjectContext
+                
+                try managedContext?.save()
+                
+                self.navigationController?.popViewController(animated: true)
+            } catch {
+                print("trip could not be saved")
+            }
+        }
+    }
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {
