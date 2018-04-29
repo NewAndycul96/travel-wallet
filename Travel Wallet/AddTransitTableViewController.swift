@@ -13,16 +13,14 @@ class AddTransitTableViewController: UITableViewController {
     @IBOutlet weak var transitType: UITextField!
     @IBOutlet weak var transitFrom: UITextField!
     @IBOutlet weak var transitTo: UITextField!
-    @IBOutlet weak var transitStartDate: UITableViewCell!
+    @IBOutlet weak var transitStartDate: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        transitType.delegate = (self as! UITextFieldDelegate)
-        transitFrom.delegate = (self as! UITextFieldDelegate)
-        transitTo.delegate = (self as! UITextFieldDelegate)
-        
-        
+        transitType.delegate = self as? UITextFieldDelegate
+        transitFrom.delegate = self as? UITextFieldDelegate
+        transitTo.delegate = self as? UITextFieldDelegate
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +35,24 @@ class AddTransitTableViewController: UITableViewController {
     }
     
     @IBAction func saveTransit(_ sender: Any) {
+        let type = transitType.text
+        let from = transitFrom.text
+        let to = transitTo.text
+        let date = transitStartDate.date
+        
+        if let transit = Transit(type: type, from: from, to: to, date: date) {
+            do {
+                let managedContext = transit.managedObjectContext
+                
+                try managedContext?.save()
+                
+                self.navigationController?.popViewController(animated: true)
+            } catch {
+                print("Tranist could not be saved")
+            }
+        }
+        
+        
     }
     
     

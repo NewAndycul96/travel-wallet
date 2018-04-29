@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewTransitViewController: UIViewController {
 
@@ -14,11 +15,28 @@ class NewTransitViewController: UIViewController {
     
     let formatter = DateFormatter()
     
+    var transits = [Transit]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         formatter.dateStyle = .medium
         formatter.timeStyle = .medium
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Transit> = Transit.fetchRequest()
+        do{
+            transits = try managedContext.fetch(fetchRequest)
+            
+            transitTableView.reloadData()
+        } catch {
+            print("Fetch could not be performed")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,11 +51,19 @@ class NewTransitViewController: UIViewController {
 
 extension NewTransitViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return transits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = transitTableView.dequeueReusableCell(withIdentifier: "newTransits", for: indexPath)
+        let transit = transits[indexPath.row]
+        
+        cell.textLabel?.text = transit.type
+        
+        if let date = transit.date {
+            cell.detailTextLabel?.text = formatter.string(from: date)
+        }
+        
         return cell
     }
 }
