@@ -15,12 +15,22 @@ class AddTransitTableViewController: UITableViewController {
     @IBOutlet weak var transitTo: UITextField!
     @IBOutlet weak var transitStartDate: UIDatePicker!
     
+    var existingTransit: Transit?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         transitType.delegate = self as? UITextFieldDelegate
         transitFrom.delegate = self as? UITextFieldDelegate
         transitTo.delegate = self as? UITextFieldDelegate
+        
+        transitType.text = existingTransit?.type
+        transitFrom.text = existingTransit?.from
+        transitTo.text = existingTransit?.to
+        
+        if let date = existingTransit?.date {
+            transitStartDate.date = date
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +42,7 @@ class AddTransitTableViewController: UITableViewController {
         transitType.resignFirstResponder()
         transitFrom.resignFirstResponder()
         transitTo.resignFirstResponder()
+
     }
     
     @IBAction func saveTransit(_ sender: Any) {
@@ -40,7 +51,18 @@ class AddTransitTableViewController: UITableViewController {
         let to = transitTo.text
         let date = transitStartDate.date
         
-        if let transit = Transit(type: type, from: from, to: to, date: date) {
+        var transit: Transit?
+        
+        if let existingTransit = existingTransit {
+            existingTransit.type = type
+            existingTransit.from = from
+            existingTransit.to = to
+            existingTransit.date = date
+        } else {
+            transit = Transit(type: type, from: from, to: to, date: date)
+        }
+        
+        if let transit = transit {
             do {
                 let managedContext = transit.managedObjectContext
                 
@@ -51,22 +73,9 @@ class AddTransitTableViewController: UITableViewController {
                 print("Tranist could not be saved")
             }
         }
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // MARK: - Table view data source
-
+//
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0

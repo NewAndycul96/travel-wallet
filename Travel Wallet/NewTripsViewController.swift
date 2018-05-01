@@ -46,7 +46,7 @@ class NewTripsViewController: UIViewController {
     }
     
     @IBAction func addNewTrip(_ sender: Any) {
-        performSegue(withIdentifier: "Add Trip", sender: self)
+        performSegue(withIdentifier: "newTrips", sender: self)
         
     }
 }
@@ -72,7 +72,7 @@ extension NewTripsViewController: UITableViewDataSource{
 
 extension NewTripsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Add Trip", sender: self)
+        performSegue(withIdentifier: "tripCell", sender: self)
     }
 }
 

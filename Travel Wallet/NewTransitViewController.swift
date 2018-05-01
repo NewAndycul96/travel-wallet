@@ -47,6 +47,34 @@ class NewTransitViewController: UIViewController {
     @IBAction func addNewTransit(_ sender: Any) {
         performSegue(withIdentifier: "newTransits", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? AddTransitTableViewController,
+            let selectedRow = self.transitTableView.indexPathForSelectedRow?.row else {
+                return
+        }
+        destination.existingTransit = transits[selectedRow]
+    }
+    
+    func deleteTransit(at indexPath: IndexPath) {
+        let transit = transits[indexPath.row]
+        
+        if let managedContext = transit.managedObjectContext {
+            managedContext.delete(transit)
+            
+            do{
+                try managedContext.save()
+                
+                self.transits.remove(at: indexPath.row)
+                
+                transitTableView.deleteRows(at: [indexPath], with: .automatic)
+            } catch {
+                print("delete Failed")
+                
+                transitTableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+    }
 }
 
 extension NewTransitViewController: UITableViewDataSource {
@@ -55,7 +83,7 @@ extension NewTransitViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = transitTableView.dequeueReusableCell(withIdentifier: "newTransits", for: indexPath)
+        let cell = transitTableView.dequeueReusableCell(withIdentifier: "newTransitCell", for: indexPath)
         let transit = transits[indexPath.row]
         
         cell.textLabel?.text = transit.type
@@ -65,6 +93,11 @@ extension NewTransitViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            deleteTransit(at: indexPath)
+        }
     }
 }
 
