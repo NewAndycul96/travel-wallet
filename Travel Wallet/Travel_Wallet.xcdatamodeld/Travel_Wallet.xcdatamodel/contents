@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Hotel" representedClassName="Hotel" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="confirmation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="durationOfStay" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rawCheckIn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rawCheckOut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
     <entity name="Transit" representedClassName="Transit" syncable="YES">
         <attribute name="from" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rawEndDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -16,5 +24,6 @@
     <elements>
         <element name="Transit" positionX="-54" positionY="18" width="128" height="120"/>
         <element name="Trip" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Hotel" positionX="-9" positionY="81" width="128" height="135"/>
     </elements>
 </model>
