@@ -715,7 +715,7 @@
                             <barButtonItem systemItem="add" id="hQ7-bt-CVu">
                                 <connections>
                                     <action selector="addNewHotel:" destination="bNq-bJ-FIi" id="6vh-Ju-p1k"/>
-                                    <segue destination="fJK-U8-fBE" kind="show" id="DX3-cR-aLN"/>
+                                    <segue destination="fJK-U8-fBE" kind="show" identifier="showHotel" id="DX3-cR-aLN"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Next" id="2c0-rd-7Vh"/>
@@ -723,7 +723,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="hotelTableView" destination="t6R-m9-5VW" id="4GX-gN-QKL"/>
+                        <outlet property="hotelTableView" destination="t6R-m9-5VW" id="AuN-U7-2Kx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uV2-7J-dds" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -962,17 +962,17 @@
                         <barButtonItem key="backBarButtonItem" title="Done" id="sO9-KD-QoW"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="BD7-4H-lxY">
                             <connections>
-                                <action selector="saveHotel:" destination="fJK-U8-fBE" id="ajV-Y0-dO4"/>
+                                <action selector="saveHotel:" destination="fJK-U8-fBE" id="hRC-Xp-9pn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="address" destination="9Nk-hl-ayB" id="bZY-Gz-zBb"/>
-                        <outlet property="checkIn" destination="iPL-rR-dHz" id="aJR-Za-toH"/>
-                        <outlet property="checkOut" destination="GHu-pp-iIH" id="6Wf-b8-uce"/>
-                        <outlet property="confirmationNum" destination="e3Q-VY-8sx" id="oIJ-2F-ZLx"/>
-                        <outlet property="durationOfStay" destination="XWK-XV-ybE" id="rNM-gX-WiD"/>
-                        <outlet property="nameOfHotel" destination="IIK-36-Bhv" id="hif-NG-aGw"/>
+                        <outlet property="address" destination="9Nk-hl-ayB" id="iEq-QX-Rqc"/>
+                        <outlet property="checkIn" destination="iPL-rR-dHz" id="efP-ra-m39"/>
+                        <outlet property="checkOut" destination="GHu-pp-iIH" id="1ln-Vt-t7d"/>
+                        <outlet property="confirmationNum" destination="e3Q-VY-8sx" id="pgw-33-fS6"/>
+                        <outlet property="durationOfStay" destination="XWK-XV-ybE" id="CIC-se-apS"/>
+                        <outlet property="nameOfHotel" destination="IIK-36-Bhv" id="Efa-8L-QjJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Po-BZ-JqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1001,7 +1001,7 @@
                         <viewLayoutGuide key="safeArea" id="pp2-BY-9ip"/>
                     </view>
                     <connections>
-                        <outlet property="mapOfHotel" destination="rS5-de-oTr" id="9Tz-xP-hd3"/>
+                        <outlet property="mapOfHotel" destination="rS5-de-oTr" id="d3F-KT-ucn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lk-3e-Ixf" userLabel="First Responder" sceneMemberID="firstResponder"/>
