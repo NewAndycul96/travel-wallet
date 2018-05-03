@@ -13,14 +13,26 @@ class AddtripViewController: UITableViewController {
 
     @IBOutlet weak var tripNameTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
-    @IBOutlet weak var startDate: UITableViewCell!
-    @IBOutlet weak var endDate: UITableViewCell!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    
+    var existingTrip: Trip?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tripNameTextField.delegate = self as? UITextFieldDelegate
         destinationTextField.delegate = self as? UITextFieldDelegate
+        
+        tripNameTextField.text = existingTrip?.tripName
+        destinationTextField.text = existingTrip?.destination
+        
+        if let startDate = existingTrip?.startDate {
+            datePicker.date = startDate
+        }
+        if let endDate = existingTrip?.endDate {
+            endDatePicker.date = endDate
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,11 +46,25 @@ class AddtripViewController: UITableViewController {
     }
 
     @IBAction func saveTrip(_ sender: Any) {
-        let name = tripNameTextField.text
-        let destinationtext = destinationTextField.text
-        let date = datePicker.date
+        let tripName = tripNameTextField.text
+        let destination = destinationTextField.text
+        let startDate = datePicker.date
+        let endDate = endDatePicker.date
         
-        if let trip = Trip(tripName: name, destination: destinationtext, date: date){
+        var trip: Trip?
+        
+        if let existingTrip = existingTrip {
+            existingTrip.tripName = tripName
+            existingTrip.destination = destination
+            existingTrip.startDate = startDate
+            existingTrip.endDate = endDate
+            
+            trip = existingTrip
+        } else {
+            trip = Trip(tripName: tripName, destination: destination, startDate: startDate, endDate: endDate)
+        }
+        
+        if let trip = trip{
             do{
                 let managedContext = trip.managedObjectContext
                 

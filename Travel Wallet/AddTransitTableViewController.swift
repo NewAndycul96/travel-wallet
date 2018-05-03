@@ -14,6 +14,7 @@ class AddTransitTableViewController: UITableViewController {
     @IBOutlet weak var transitFrom: UITextField!
     @IBOutlet weak var transitTo: UITextField!
     @IBOutlet weak var transitStartDate: UIDatePicker!
+    @IBOutlet weak var transitEndDate: UIDatePicker!
     
     var existingTransit: Transit?
     
@@ -28,8 +29,11 @@ class AddTransitTableViewController: UITableViewController {
         transitFrom.text = existingTransit?.from
         transitTo.text = existingTransit?.to
         
-        if let date = existingTransit?.date {
-            transitStartDate.date = date
+        if let startDate = existingTransit?.startDate {
+            transitStartDate.date = startDate
+        }
+        if let endDate = existingTransit?.endDate{
+            transitEndDate.date = endDate
         }
     }
 
@@ -49,7 +53,8 @@ class AddTransitTableViewController: UITableViewController {
         let type = transitType.text
         let from = transitFrom.text
         let to = transitTo.text
-        let date = transitStartDate.date
+        let startDate = transitStartDate.date
+        let endDate = transitEndDate.date
         
         var transit: Transit?
         
@@ -57,9 +62,12 @@ class AddTransitTableViewController: UITableViewController {
             existingTransit.type = type
             existingTransit.from = from
             existingTransit.to = to
-            existingTransit.date = date
+            existingTransit.startDate = startDate
+            existingTransit.endDate = endDate
+            
+            
         } else {
-            transit = Transit(type: type, from: from, to: to, date: date)
+            transit = Transit(type: type, from: from, to: to, startDate: startDate, endDate: endDate)
         }
         
         if let transit = transit {

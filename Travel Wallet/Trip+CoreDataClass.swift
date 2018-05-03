@@ -12,7 +12,7 @@ import CoreData
 
 @objc(Trip)
 public class Trip: NSManagedObject {
-    var date: Date? {
+    var startDate: Date? {
         get {
             return rawStartDate as Date?
         }
@@ -20,7 +20,15 @@ public class Trip: NSManagedObject {
             rawStartDate = newValue as NSDate?
         }
     }
-    convenience init?(tripName: String?, destination: String?, date: Date?) {
+    var endDate: Date? {
+        get{
+            return rawEndDate as Date?
+        }
+        set {
+            rawEndDate = newValue as NSDate?
+        }
+    }
+    convenience init?(tripName: String?, destination: String?, startDate: Date?, endDate: Date?) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
         guard let managedContext = appDelegate?.persistentContainer.viewContext else {
@@ -31,6 +39,7 @@ public class Trip: NSManagedObject {
         
         self.tripName = tripName
         self.destination = destination
-        self.date = date
+        self.startDate = startDate
+        self.endDate = endDate
     }
 }

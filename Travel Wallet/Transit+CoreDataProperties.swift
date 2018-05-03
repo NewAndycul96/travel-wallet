@@ -20,6 +20,7 @@ extension Transit {
     @NSManaged public var type: String?
     @NSManaged public var from: String?
     @NSManaged public var to: String?
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawStartDate: NSDate?
+    @NSManaged public var rawEndDate: NSDate?
 
 }

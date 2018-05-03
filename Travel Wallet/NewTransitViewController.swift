@@ -88,8 +88,11 @@ extension NewTransitViewController: UITableViewDataSource {
         
         cell.textLabel?.text = transit.type
         
-        if let date = transit.date {
-            cell.detailTextLabel?.text = formatter.string(from: date)
+        if let startDate = transit.startDate {
+            cell.detailTextLabel?.text = formatter.string(from: startDate)
+        }
+        if let endDate = transit.endDate {
+            cell.detailTextLabel?.text = formatter.string(from: endDate)
         }
         
         return cell

@@ -12,16 +12,24 @@ import CoreData
 
 @objc(Transit)
 public class Transit: NSManagedObject {
-    var date: Date? {
+    var startDate: Date? {
         get {
-                return rawDate as Date?
+                return rawStartDate as Date?
         }
         set {
-            rawDate = newValue as NSDate?
+            rawStartDate = newValue as NSDate?
+        }
+    }
+    var endDate: Date?{
+        get {
+            return rawEndDate as Date?
+        }
+        set {
+            rawEndDate = newValue as NSDate?
         }
     }
     
-    convenience init?(type: String?, from: String?, to: String?, date: Date?) {
+    convenience init?(type: String?, from: String?, to: String?, startDate: Date?, endDate: Date?) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         guard let managedContext = appDelegate?.persistentContainer.viewContext else{
             return nil
@@ -32,6 +40,7 @@ public class Transit: NSManagedObject {
         self.type = type
         self.from = from
         self.to = to
-        self.date = date
+        self.startDate = startDate
+        self.endDate = endDate
     }
 }

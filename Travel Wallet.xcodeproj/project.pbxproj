@@ -12,7 +12,6 @@
 		1607732C2073FA1600CC3557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1607732A2073FA1600CC3557 /* Main.storyboard */; };
 		160773312073FA1600CC3557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160773302073FA1600CC3557 /* Assets.xcassets */; };
 		160773342073FA1600CC3557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160773322073FA1600CC3557 /* LaunchScreen.storyboard */; };
-		1629793220928026000DD3D2 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1629793120928026000DD3D2 /* DateViewController.swift */; };
 		1629793920951E3C000DD3D2 /* Travel_Wallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1629793720951E3C000DD3D2 /* Travel_Wallet.xcdatamodeld */; };
 		1629793C2095205E000DD3D2 /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1629793A2095205E000DD3D2 /* Trip+CoreDataClass.swift */; };
 		1629793D2095205E000DD3D2 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1629793B2095205E000DD3D2 /* Trip+CoreDataProperties.swift */; };
@@ -33,7 +32,6 @@
 		160773302073FA1600CC3557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		160773332073FA1600CC3557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		160773352073FA1600CC3557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1629793120928026000DD3D2 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		1629793820951E3C000DD3D2 /* Travel_Wallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Travel_Wallet.xcdatamodel; sourceTree = "<group>"; };
 		1629793A2095205E000DD3D2 /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1629793B2095205E000DD3D2 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				160773282073FA1600CC3557 /* TripsViewController.swift */,
 				1629793E20952E31000DD3D2 /* NewTripsViewController.swift */,
 				1629794020966732000DD3D2 /* NewTransitViewController.swift */,
-				1629793120928026000DD3D2 /* DateViewController.swift */,
 				1629794220966766000DD3D2 /* AddTransitTableViewController.swift */,
 				165A2883209251AD00E14E13 /* AddtripViewController.swift */,
 				1629794420966F35000DD3D2 /* TravelWalletViewController.swift */,
@@ -177,7 +174,6 @@
 				1629794120966732000DD3D2 /* NewTransitViewController.swift in Sources */,
 				1629794520966F35000DD3D2 /* TravelWalletViewController.swift in Sources */,
 				16297948209673DA000DD3D2 /* Transit+CoreDataClass.swift in Sources */,
-				1629793220928026000DD3D2 /* DateViewController.swift in Sources */,
 				160773292073FA1600CC3557 /* TripsViewController.swift in Sources */,
 				1629793920951E3C000DD3D2 /* Travel_Wallet.xcdatamodeld in Sources */,
 				160773272073FA1600CC3557 /* AppDelegate.swift in Sources */,

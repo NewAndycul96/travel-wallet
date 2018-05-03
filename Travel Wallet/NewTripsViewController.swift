@@ -11,7 +11,7 @@ import CoreData
 
 class NewTripsViewController: UIViewController {
 
-    @IBOutlet weak var newTripsViewController: UITableView!
+    @IBOutlet weak var newTripsTableView: UITableView!
     
     let formatter = DateFormatter()
     
@@ -34,7 +34,7 @@ class NewTripsViewController: UIViewController {
         do{
             trips = try managedContext.fetch(fetchRequest)
             
-            newTripsViewController.reloadData()
+            newTripsTableView.reloadData()
         } catch {
             print("Fetch could not be performed")
         }
@@ -47,7 +47,36 @@ class NewTripsViewController: UIViewController {
     
     @IBAction func addNewTrip(_ sender: Any) {
         performSegue(withIdentifier: "newTrips", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? AddtripViewController,
+            let selectedRow = self.newTripsTableView.indexPathForSelectedRow?.row else {
+                return
+        }
         
+        destination.existingTrip = trips[selectedRow]
+    }
+    
+    func deleteTrip(at indexPath: IndexPath) {
+        let trip = trips[indexPath.row]
+        
+        if let managedContext = trip.managedObjectContext {
+            managedContext.delete(trip)
+            
+            do {
+                try managedContext.save()
+                
+                self.trips.remove(at: indexPath.row)
+                
+                newTripsTableView.deleteRows(at: [indexPath], with: .automatic)
+            } catch {
+                print("Delete Failed")
+                
+                newTripsTableView.reloadRows(at: [indexPath], with: .automatic)
+                
+            }
+        }
     }
 }
 
@@ -57,16 +86,24 @@ extension NewTripsViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = newTripsViewController.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
+        let cell = newTripsTableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
         let trip = trips[indexPath.row]
         
         cell.textLabel?.text = trip.tripName
         
-        if let date = trip.date {
-            cell.detailTextLabel?.text = formatter.string(from: date)
+        if let startDate = trip.startDate {
+            cell.detailTextLabel?.text = formatter.string(from: startDate)
         }
-        
+        if let endDate = trip.endDate{
+            cell.detailTextLabel?.text = formatter.string(from: endDate)
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            deleteTrip(at: indexPath)
+        }
     }
 }
 
@@ -75,18 +112,5 @@ extension NewTripsViewController: UITableViewDelegate{
         performSegue(withIdentifier: "tripCell", sender: self)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
