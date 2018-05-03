@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import CoreData
 
 class TripNameViewController: UIViewController {
 
     @IBOutlet weak var tripNameTableView: UITableView!
     
+    var names: [NameOfTrip] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<NameOfTrip> = NameOfTrip.fetchRequest()
+        
+        do {
+            names = try managedContext.fetch(fetchRequest)
+            tripNameTableView.reloadData()
+        }
+        catch{
+            print("Could not fetch")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,11 +58,14 @@ class TripNameViewController: UIViewController {
 
 extension TripNameViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return names.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tripNameTableView.dequeueReusableCell(withIdentifier: "tripNameCell", for: indexPath)
+        let name = names[indexPath.row]
+        
+        cell.textLabel?.text = name.nameOfTrip
         return cell
     }
 }
