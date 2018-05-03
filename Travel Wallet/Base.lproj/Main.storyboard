@@ -1001,7 +1001,7 @@
                         <viewLayoutGuide key="safeArea" id="pp2-BY-9ip"/>
                     </view>
                     <connections>
-                        <outlet property="mapOfHotel" destination="rS5-de-oTr" id="d3F-KT-ucn"/>
+                        <outlet property="mapOfHotel" destination="rS5-de-oTr" id="9lT-5x-mtc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lk-3e-Ixf" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,8 +11,8 @@ import UIKit
 
 class MapViewController: UIViewController {
     
-    @IBOutlet weak var mapOfHotel: MKMapView!
     
+    @IBOutlet weak var mapOfHotel: MKMapView!
     
     var address: String = ""
     
@@ -88,4 +88,3 @@ class MapViewController: UIViewController {
      */
     
 }
-

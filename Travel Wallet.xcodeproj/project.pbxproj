@@ -26,7 +26,7 @@
 		C6EB31DB209B83DA00CAC109 /* Hotel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31D9209B83DA00CAC109 /* Hotel+CoreDataProperties.swift */; };
 		C6EB31DD209B87BF00CAC109 /* NewHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */; };
 		C6EB31DF209B886100CAC109 /* HotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31DE209B886100CAC109 /* HotelTableViewController.swift */; };
-		C6EB31E1209B8A6E00CAC109 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31E0209B8A6E00CAC109 /* MapViewController.swift */; };
+		C6EB31E3209B8BDF00CAC109 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31E2209B8BDF00CAC109 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		C6EB31D9209B83DA00CAC109 /* Hotel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hotel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotelViewController.swift; sourceTree = "<group>"; };
 		C6EB31DE209B886100CAC109 /* HotelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewController.swift; sourceTree = "<group>"; };
-		C6EB31E0209B8A6E00CAC109 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C6EB31E2209B8BDF00CAC109 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,6 @@
 		1607731A2073FA1500CC3557 = {
 			isa = PBXGroup;
 			children = (
-				C6EB31E0209B8A6E00CAC109 /* MapViewController.swift */,
 				160773252073FA1500CC3557 /* Travel Wallet */,
 				160773242073FA1500CC3557 /* Products */,
 			);
@@ -98,6 +97,7 @@
 				1629793720951E3C000DD3D2 /* Travel_Wallet.xcdatamodeld */,
 				C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */,
 				C6EB31DE209B886100CAC109 /* HotelTableViewController.swift */,
+				C6EB31E2209B8BDF00CAC109 /* MapViewController.swift */,
 				160773262073FA1600CC3557 /* AppDelegate.swift */,
 				160773282073FA1600CC3557 /* TripsViewController.swift */,
 				1629793E20952E31000DD3D2 /* NewTripsViewController.swift */,
@@ -197,7 +197,7 @@
 				1629793920951E3C000DD3D2 /* Travel_Wallet.xcdatamodeld in Sources */,
 				160773272073FA1600CC3557 /* AppDelegate.swift in Sources */,
 				16297949209673DA000DD3D2 /* Transit+CoreDataProperties.swift in Sources */,
-				C6EB31E1209B8A6E00CAC109 /* MapViewController.swift in Sources */,
+				C6EB31E3209B8BDF00CAC109 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
