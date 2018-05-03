@@ -2,7 +2,7 @@
 //  Trip+CoreDataProperties.swift
 //  Travel Wallet
 //
-//  Created by Anand Kulkarni on 4/28/18.
+//  Created by Allison Dolan on 5/3/18.
 //  Copyright © 2018 Anand Kulkarni. All rights reserved.
 //
 //
@@ -17,9 +17,10 @@ extension Trip {
         return NSFetchRequest<Trip>(entityName: "Trip")
     }
 
-    @NSManaged public var tripName: String?
     @NSManaged public var destination: String?
-    @NSManaged public var rawStartDate: NSDate?
     @NSManaged public var rawEndDate: NSDate?
+    @NSManaged public var rawStartDate: NSDate?
+    @NSManaged public var tripName: String?
+    @NSManaged public var nameOfTrip: NameOfTrip?
 
 }
