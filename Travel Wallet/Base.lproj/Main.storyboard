@@ -22,9 +22,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="ez9-Oo-OQx" kind="relationship" relationship="viewControllers" id="fDb-cR-H0Q"/>
-                        <segue destination="5WD-i2-Npi" kind="relationship" relationship="viewControllers" id="rwM-VM-2pn"/>
                         <segue destination="yRB-Tg-CUu" kind="relationship" relationship="viewControllers" id="lkc-wO-aqw"/>
                         <segue destination="HlJ-gT-mCm" kind="relationship" relationship="viewControllers" id="wkx-Uf-9Ff"/>
+                        <segue destination="5WD-i2-Npi" kind="relationship" relationship="viewControllers" id="rwM-VM-2pn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orB-6J-S0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,6 +119,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="newTripsTableView" destination="bOa-U0-Cu7" id="dOs-B7-sYd"/>
+                        <outlet property="nextButton" destination="lOI-7a-zk2" id="k2r-cP-rlb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZI-wb-qLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,7 +298,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NA0-S7-8EA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1378" y="2430"/>
+            <point key="canvasLocation" x="-1378" y="3233"/>
         </scene>
         <!--Timeline-->
         <scene sceneID="uk6-Nm-Fgj">
@@ -351,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYx-ah-381" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="2429"/>
+            <point key="canvasLocation" x="-388" y="3234"/>
         </scene>
         <!--Transit-->
         <scene sceneID="I4e-fT-vPR">
@@ -380,7 +381,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5eu-f3-Mys">
-                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newTransitCell" textLabel="RVO-o0-m97" detailTextLabel="7g9-Sb-iQX" style="IBUITableViewCellStyleSubtitle" id="rAE-3b-9UA">
@@ -655,18 +656,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXb-US-M5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1378" y="-91"/>
+            <point key="canvasLocation" x="-1378" y="2399"/>
         </scene>
         <!--Hotel-->
         <scene sceneID="TeF-6W-jMB">
             <objects>
-                <viewController id="bNq-bJ-FIi" customClass="NewHotelViewController" customModule="Hotel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bNq-bJ-FIi" customClass="NewHotelViewController" customModule="Travel_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rI-JU-3ud">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t6R-m9-5VW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hotelCell" textLabel="qqh-1p-7o1" detailTextLabel="bdq-sg-RHz" style="IBUITableViewCellStyleSubtitle" id="7ez-A2-YVk">
@@ -729,12 +730,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uV2-7J-dds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="-91"/>
+            <point key="canvasLocation" x="-388" y="2399"/>
         </scene>
         <!--Add Hotel-->
         <scene sceneID="6Q0-Ei-9VC">
             <objects>
-                <tableViewController id="fJK-U8-fBE" customClass="HotelTableViewController" customModule="Hotel" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fJK-U8-fBE" customClass="HotelTableViewController" customModule="Travel_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="23G-pa-5QY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -978,18 +979,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Po-BZ-JqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464.80000000000001" y="-91.304347826086968"/>
+            <point key="canvasLocation" x="465" y="2399"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="kbl-Sk-nit">
             <objects>
-                <viewController id="TdH-CV-hEt" customClass="MapViewController" customModule="Hotel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TdH-CV-hEt" customClass="MapViewController" customModule="Travel_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5TG-Hw-R8f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-de-oTr">
-                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1007,7 +1008,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lk-3e-Ixf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1278" y="-91"/>
+            <point key="canvasLocation" x="1278" y="2399"/>
         </scene>
     </scenes>
     <resources>
@@ -1017,7 +1018,7 @@
         <image name="TripsSymbol" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hcB-ir-Y6H"/>
-        <segue reference="yf1-NN-xg8"/>
+        <segue reference="3xC-DM-ucL"/>
+        <segue reference="ANu-19-3h8"/>
     </inferredMetricsTieBreakers>
 </document>

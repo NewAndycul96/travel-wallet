@@ -11,6 +11,7 @@ import CoreData
 
 class NewTripsViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var newTripsTableView: UITableView!
     
     let formatter = DateFormatter()
@@ -35,7 +36,11 @@ class NewTripsViewController: UIViewController {
         
         do{
             trips = try managedContext.fetch(fetchRequest)
-            
+            if trips.count == 0{
+                nextButton.isEnabled = false
+            } else {
+                nextButton.isEnabled = true
+            }
             newTripsTableView.reloadData()
         } catch {
             print("Fetch could not be performed")
