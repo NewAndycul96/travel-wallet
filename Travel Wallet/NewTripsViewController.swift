@@ -16,6 +16,8 @@ class NewTripsViewController: UIViewController {
     let formatter = DateFormatter()
     
     var trips = [Trip]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +46,8 @@ class NewTripsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
+    
     
     @IBAction func addNewTrip(_ sender: Any) {
         performSegue(withIdentifier: "newTrips", sender: self)

@@ -92,13 +92,14 @@ extension NewHotelViewController: UITableViewDataSource {
         let cell = hotelTableView.dequeueReusableCell(withIdentifier: "hotelCell", for: indexPath)
         let hotel = hotels[indexPath.row]
         
-        cell.textLabel?.text = hotel.name
+       
+            cell.textLabel?.text = hotel.name
         
         if let date = hotel.checkIn{
             cell.detailTextLabel?.text = dateFormatter.string(from: date)
         }
         
-        
+    
         
         return cell
     }

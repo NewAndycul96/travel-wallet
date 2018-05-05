@@ -42,7 +42,13 @@ class TripNameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? NewTripsViewController,
+            let selectedRow = self.tripNameTableView.indexPathForSelectedRow?.row else{
+            return
+        }
+        destination.name = names[selectedRow]
+    }
 
     /*
     // MARK: - Navigation

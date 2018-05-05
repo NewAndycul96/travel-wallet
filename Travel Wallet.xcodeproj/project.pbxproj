@@ -27,8 +27,6 @@
 		C6EB31DD209B87BF00CAC109 /* NewHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */; };
 		C6EB31DF209B886100CAC109 /* HotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31DE209B886100CAC109 /* HotelTableViewController.swift */; };
 		C6EB31E3209B8BDF00CAC109 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31E2209B8BDF00CAC109 /* MapViewController.swift */; };
-		C6EB31E5209BA4EF00CAC109 /* TripNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31E4209BA4EF00CAC109 /* TripNameViewController.swift */; };
-		C6EB31E7209BA70E00CAC109 /* NewTripNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31E6209BA70E00CAC109 /* NewTripNameViewController.swift */; };
 		C6EB31EA209BAE4F00CAC109 /* NameOfTrip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31E8209BAE4F00CAC109 /* NameOfTrip+CoreDataClass.swift */; };
 		C6EB31EB209BAE4F00CAC109 /* NameOfTrip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31E9209BAE4F00CAC109 /* NameOfTrip+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -56,8 +54,6 @@
 		C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotelViewController.swift; sourceTree = "<group>"; };
 		C6EB31DE209B886100CAC109 /* HotelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewController.swift; sourceTree = "<group>"; };
 		C6EB31E2209B8BDF00CAC109 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		C6EB31E4209BA4EF00CAC109 /* TripNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNameViewController.swift; sourceTree = "<group>"; };
-		C6EB31E6209BA70E00CAC109 /* NewTripNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripNameViewController.swift; sourceTree = "<group>"; };
 		C6EB31E8209BAE4F00CAC109 /* NameOfTrip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameOfTrip+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6EB31E9209BAE4F00CAC109 /* NameOfTrip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameOfTrip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +111,6 @@
 				1629794220966766000DD3D2 /* AddTransitTableViewController.swift */,
 				165A2883209251AD00E14E13 /* AddtripViewController.swift */,
 				1629794420966F35000DD3D2 /* TravelWalletViewController.swift */,
-				C6EB31E4209BA4EF00CAC109 /* TripNameViewController.swift */,
-				C6EB31E6209BA70E00CAC109 /* NewTripNameViewController.swift */,
 			);
 			path = "Travel Wallet";
 			sourceTree = "<group>";
@@ -202,8 +196,6 @@
 				1629793F20952E31000DD3D2 /* NewTripsViewController.swift in Sources */,
 				1629794120966732000DD3D2 /* NewTransitViewController.swift in Sources */,
 				C6EB31DD209B87BF00CAC109 /* NewHotelViewController.swift in Sources */,
-				C6EB31E5209BA4EF00CAC109 /* TripNameViewController.swift in Sources */,
-				C6EB31E7209BA70E00CAC109 /* NewTripNameViewController.swift in Sources */,
 				1629794520966F35000DD3D2 /* TravelWalletViewController.swift in Sources */,
 				16297948209673DA000DD3D2 /* Transit+CoreDataClass.swift in Sources */,
 				C6EB31DB209B83DA00CAC109 /* Hotel+CoreDataProperties.swift in Sources */,
