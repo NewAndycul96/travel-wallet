@@ -21,6 +21,8 @@
 		1629794520966F35000DD3D2 /* TravelWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1629794420966F35000DD3D2 /* TravelWalletViewController.swift */; };
 		16297948209673DA000DD3D2 /* Transit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16297946209673DA000DD3D2 /* Transit+CoreDataClass.swift */; };
 		16297949209673DA000DD3D2 /* Transit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16297947209673DA000DD3D2 /* Transit+CoreDataProperties.swift */; };
+		1629797A209F97FE000DD3D2 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16297979209F97FE000DD3D2 /* NewActivityViewController.swift */; };
+		1629797C209F9838000DD3D2 /* AddActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1629797B209F9838000DD3D2 /* AddActivityTableViewController.swift */; };
 		165A2884209251AD00E14E13 /* AddtripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165A2883209251AD00E14E13 /* AddtripViewController.swift */; };
 		C6EB31DA209B83DA00CAC109 /* Hotel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31D8209B83DA00CAC109 /* Hotel+CoreDataClass.swift */; };
 		C6EB31DB209B83DA00CAC109 /* Hotel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31D9209B83DA00CAC109 /* Hotel+CoreDataProperties.swift */; };
@@ -48,6 +50,8 @@
 		1629794420966F35000DD3D2 /* TravelWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelWalletViewController.swift; sourceTree = "<group>"; };
 		16297946209673DA000DD3D2 /* Transit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		16297947209673DA000DD3D2 /* Transit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		16297979209F97FE000DD3D2 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		1629797B209F9838000DD3D2 /* AddActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityTableViewController.swift; sourceTree = "<group>"; };
 		165A2883209251AD00E14E13 /* AddtripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtripViewController.swift; sourceTree = "<group>"; };
 		C6EB31D8209B83DA00CAC109 /* Hotel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hotel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6EB31D9209B83DA00CAC109 /* Hotel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hotel+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -103,11 +107,13 @@
 				1629793720951E3C000DD3D2 /* Travel_Wallet.xcdatamodeld */,
 				C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */,
 				C6EB31DE209B886100CAC109 /* HotelTableViewController.swift */,
+				1629797B209F9838000DD3D2 /* AddActivityTableViewController.swift */,
 				C6EB31E2209B8BDF00CAC109 /* MapViewController.swift */,
 				160773262073FA1600CC3557 /* AppDelegate.swift */,
 				160773282073FA1600CC3557 /* TripsViewController.swift */,
 				1629793E20952E31000DD3D2 /* NewTripsViewController.swift */,
 				1629794020966732000DD3D2 /* NewTransitViewController.swift */,
+				16297979209F97FE000DD3D2 /* NewActivityViewController.swift */,
 				1629794220966766000DD3D2 /* AddTransitTableViewController.swift */,
 				165A2883209251AD00E14E13 /* AddtripViewController.swift */,
 				1629794420966F35000DD3D2 /* TravelWalletViewController.swift */,
@@ -188,9 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				165A2884209251AD00E14E13 /* AddtripViewController.swift in Sources */,
+				1629797C209F9838000DD3D2 /* AddActivityTableViewController.swift in Sources */,
 				C6EB31EB209BAE4F00CAC109 /* NameOfTrip+CoreDataProperties.swift in Sources */,
 				1629793C2095205E000DD3D2 /* Trip+CoreDataClass.swift in Sources */,
 				C6EB31DA209B83DA00CAC109 /* Hotel+CoreDataClass.swift in Sources */,
+				1629797A209F97FE000DD3D2 /* NewActivityViewController.swift in Sources */,
 				1629793D2095205E000DD3D2 /* Trip+CoreDataProperties.swift in Sources */,
 				1629794320966766000DD3D2 /* AddTransitTableViewController.swift in Sources */,
 				1629793F20952E31000DD3D2 /* NewTripsViewController.swift in Sources */,

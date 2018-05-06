@@ -36,11 +36,7 @@ class NewTripsViewController: UIViewController {
         
         do{
             trips = try managedContext.fetch(fetchRequest)
-            if trips.count == 0{
-                nextButton.isEnabled = false
-            } else {
-                nextButton.isEnabled = true
-            }
+
             newTripsTableView.reloadData()
         } catch {
             print("Fetch could not be performed")
