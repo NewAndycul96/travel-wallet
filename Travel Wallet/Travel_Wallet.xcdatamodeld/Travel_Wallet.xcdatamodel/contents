@@ -33,10 +33,10 @@
         <relationship name="nameOfTrip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NameOfTrip" inverseName="rawTrips" inverseEntity="NameOfTrip" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Activity" positionX="-18" positionY="81" width="128" height="105"/>
         <element name="Hotel" positionX="-9" positionY="81" width="128" height="135"/>
         <element name="NameOfTrip" positionX="18" positionY="135" width="128" height="75"/>
         <element name="Transit" positionX="-54" positionY="18" width="128" height="120"/>
         <element name="Trip" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="Activity" positionX="-18" positionY="81" width="128" height="105"/>
     </elements>
 </model>

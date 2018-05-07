@@ -95,8 +95,8 @@ extension NewHotelViewController: UITableViewDataSource {
        
             cell.textLabel?.text = hotel.name
         
-        if let date = hotel.checkIn{
-            cell.detailTextLabel?.text = dateFormatter.string(from: date)
+        if let date = hotel.checkIn, let outDate = hotel.checkOut{
+            cell.detailTextLabel?.text = "\(dateFormatter.string(from: date)) - \(dateFormatter.string(from: outDate))"
         }
         
     

@@ -23,7 +23,7 @@ class NewTripsViewController: UIViewController {
         super.viewDidLoad()
         
         formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +36,14 @@ class NewTripsViewController: UIViewController {
         
         do{
             trips = try managedContext.fetch(fetchRequest)
+            
+            if trips.count == 0{
+                    nextButton.isEnabled = false
+    
+                } else {
+                    nextButton.isEnabled = true
+    
+                }
 
             newTripsTableView.reloadData()
         } catch {
@@ -96,12 +104,10 @@ extension NewTripsViewController: UITableViewDataSource{
         
         cell.textLabel?.text = trip.tripName
         
-        if let startDate = trip.startDate {
-            cell.detailTextLabel?.text = formatter.string(from: startDate)
+        if let startDate = trip.startDate, let endDate = trip.endDate {
+            cell.detailTextLabel?.text = "\(formatter.string(from: startDate)) - \(formatter.string(from: endDate))"
         }
-        if let endDate = trip.endDate{
-            cell.detailTextLabel?.text = formatter.string(from: endDate)
-        }
+       
         return cell
     }
     

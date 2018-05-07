@@ -21,7 +21,7 @@ class NewTransitViewController: UIViewController {
         super.viewDidLoad()
         
         formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
+        formatter.timeStyle = .short
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,12 +89,9 @@ extension NewTransitViewController: UITableViewDataSource {
         cell.textLabel?.text = transit.type
         
         if let startDate = transit.startDate {
-            cell.detailTextLabel?.text = formatter.string(from: startDate)
+            cell.detailTextLabel?.text = "Departure: \(formatter.string(from: startDate))"
         }
-        if let endDate = transit.endDate {
-            cell.detailTextLabel?.text = formatter.string(from: endDate)
-        }
-        
+      
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

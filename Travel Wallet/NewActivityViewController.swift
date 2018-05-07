@@ -19,7 +19,8 @@ class NewActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        formatter.timeStyle = .medium
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
 
     }
     
