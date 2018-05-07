@@ -13,8 +13,17 @@ class AddActivityTableViewController: UITableViewController {
     @IBOutlet weak var activityType: UITextField!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var activityTime: UIDatePicker!
+    
+    var existingactivity: Activity?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityType.text = existingactivity?.type
+        location.text = existingactivity?.location
+        if let date = existingactivity?.time{
+            activityTime.date = date
+        }
 
     }
 
@@ -29,20 +38,35 @@ class AddActivityTableViewController: UITableViewController {
     }
     
     @IBAction func saveActivity(_ sender: Any) {
+        let type = activityType.text
+        let activityLocation = location.text
+        let time = activityTime.date
         
+        var activity: Activity?
+        
+        if let existingactivity = existingactivity {
+            existingactivity.type = type
+            existingactivity.location = activityLocation
+            existingactivity.time = time
+            
+            activity = existingactivity
+        }else{
+            activity = Activity(type: type, location: activityLocation, activityTime: time)
+        }
+        
+        if let activity = activity{
+            do {
+                let managedContext = activity.managedObjectContext
+                
+                try managedContext?.save()
+                
+                self.navigationController?.popViewController(animated: true)
+            } catch {
+                print("Activity could not be saved")
+            }
+        }
     }
-    
 }
-
-extension AddActivityTableViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return true
-    }
-}
-    
-    
-    
-
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {

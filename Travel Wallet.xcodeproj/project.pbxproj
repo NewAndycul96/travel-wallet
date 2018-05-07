@@ -24,6 +24,8 @@
 		1629797A209F97FE000DD3D2 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16297979209F97FE000DD3D2 /* NewActivityViewController.swift */; };
 		1629797C209F9838000DD3D2 /* AddActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1629797B209F9838000DD3D2 /* AddActivityTableViewController.swift */; };
 		165A2884209251AD00E14E13 /* AddtripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165A2883209251AD00E14E13 /* AddtripViewController.swift */; };
+		218FEE17209FA1190059818B /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FEE15209FA1190059818B /* Activity+CoreDataClass.swift */; };
+		218FEE18209FA1190059818B /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FEE16209FA1190059818B /* Activity+CoreDataProperties.swift */; };
 		C6EB31DA209B83DA00CAC109 /* Hotel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31D8209B83DA00CAC109 /* Hotel+CoreDataClass.swift */; };
 		C6EB31DB209B83DA00CAC109 /* Hotel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31D9209B83DA00CAC109 /* Hotel+CoreDataProperties.swift */; };
 		C6EB31DD209B87BF00CAC109 /* NewHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */; };
@@ -53,6 +55,8 @@
 		16297979209F97FE000DD3D2 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
 		1629797B209F9838000DD3D2 /* AddActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityTableViewController.swift; sourceTree = "<group>"; };
 		165A2883209251AD00E14E13 /* AddtripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtripViewController.swift; sourceTree = "<group>"; };
+		218FEE15209FA1190059818B /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		218FEE16209FA1190059818B /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6EB31D8209B83DA00CAC109 /* Hotel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hotel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6EB31D9209B83DA00CAC109 /* Hotel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hotel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6EB31DC209B87BF00CAC109 /* NewHotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotelViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		160773252073FA1500CC3557 /* Travel Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				218FEE15209FA1190059818B /* Activity+CoreDataClass.swift */,
+				218FEE16209FA1190059818B /* Activity+CoreDataProperties.swift */,
 				C6EB31E8209BAE4F00CAC109 /* NameOfTrip+CoreDataClass.swift */,
 				C6EB31E9209BAE4F00CAC109 /* NameOfTrip+CoreDataProperties.swift */,
 				C6EB31D8209B83DA00CAC109 /* Hotel+CoreDataClass.swift */,
@@ -206,7 +212,9 @@
 				C6EB31DD209B87BF00CAC109 /* NewHotelViewController.swift in Sources */,
 				1629794520966F35000DD3D2 /* TravelWalletViewController.swift in Sources */,
 				16297948209673DA000DD3D2 /* Transit+CoreDataClass.swift in Sources */,
+				218FEE18209FA1190059818B /* Activity+CoreDataProperties.swift in Sources */,
 				C6EB31DB209B83DA00CAC109 /* Hotel+CoreDataProperties.swift in Sources */,
+				218FEE17209FA1190059818B /* Activity+CoreDataClass.swift in Sources */,
 				160773292073FA1600CC3557 /* TripsViewController.swift in Sources */,
 				C6EB31DF209B886100CAC109 /* HotelTableViewController.swift in Sources */,
 				1629793920951E3C000DD3D2 /* Travel_Wallet.xcdatamodeld in Sources */,
