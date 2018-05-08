@@ -65,7 +65,7 @@ class AddTransitTableViewController: UITableViewController {
             existingTransit.startDate = startDate
             existingTransit.endDate = endDate
             
-            
+            transit = existingTransit
         } else {
             transit = Transit(type: type, from: from, to: to, startDate: startDate, endDate: endDate)
         }
